@@ -1,0 +1,193 @@
+body {
+    background-image: url(../img/binbous_servr.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+#text {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px;
+}
+div.form {
+    display: block;
+    text-align: center;
+}
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+form #btn1 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+form #btn2 {
+    margin-bottom: 20px;
+}
+.pop-up {
+    display: none;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+
+    width: 650px;
+
+    color: white;
+    text-align: center;
+
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;;
+}
+.pop-up button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* ---- FORM CARD ---- */
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+#kviz {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    font-family: system-ui, sans-serif;
+}
+
+/* ---- QUESTIONS ---- */
+#kviz p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 30px 0 15px;
+    color: #222;
+}
+
+/* ---- HIDE DEFAULT RADIO ---- */
+#kviz input[type="radio"] {
+    display: none;
+}
+
+/* ---- CUSTOM RADIO LABEL ---- */
+#kviz label {
+    display: block;
+    padding: 14px 16px 14px 48px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #f2f2f2;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* ---- RADIO CIRCLE ---- */
+#kviz label::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    background: white;
+}
+
+/* ---- HOVER ---- */
+#kviz label:hover {
+    background: #e6e6e6;
+}
+
+/* ---- CHECKED STATE ---- */
+#kviz input[type="radio"]:checked + label {
+    background: #d62828;
+    color: white;
+}
+
+#kviz input[type="radio"]:checked + label::before {
+    border-color: white;
+    background: radial-gradient(circle, white 45%, transparent 50%);
+}
+
+/* ---- BUTTONS ---- */
+#btn1, #btn2 {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn1 {
+    background: #1d3557;
+    color: white;
+}
+
+#btn1:hover {
+    background: #16324f;
+}
+
+#btn2 {
+    background: #aaa;
+}
+
+#btn2:hover {
+    background: #888;
+}
+#scrollToTopBtn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+}
+.stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(255, 0, 0) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+  box-shadow: 0 0.25rem 0.5rem 0 gray;
+  opacity: 0.7;
+}.stt:hover {
+  opacity: 0.8;
+}.stt:focus {
+  opacity: 0.9;
+}.stt:active {
+  opacity: 1;
+}
+:root { scroll-behavior: smooth; }
+
+.playlist p {
+    font-size: 45px;
+    margin-left: 50px;
+    text-shadow: 5px 5px #558abb;
+}

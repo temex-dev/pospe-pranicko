@@ -1,0 +1,27 @@
+.hlava {
+    background-image: url('./img/mmesos.png');
+    background-repeat: repeat-x;
+    height: 199px;
+    width: 100%;
+    font-family: Paprika, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 500%;
+}
+.hlava li {
+    display: inline-block;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: transform 1000ms cubic-bezier(.2,.8,.2,1);
+    will-change: transform;
+    color: blue;
+}
+a:hover {
+    transform: translateY(-40px);
+}

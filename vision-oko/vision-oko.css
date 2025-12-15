@@ -1,0 +1,34 @@
+body {
+    background-image: url(../img/oko-background.gif);
+    background-size: cover;
+    background-repeat: repeat;
+}
+.levacka, .pravacka {
+    width: 45%;;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+.levacka {
+    float: left;
+    text-align: center;
+    padding-top: 100px;
+}
+.pravacka {
+    float: right;
+}
+.posvatny-vojta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.playlist {
+    clear: both !important;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+video {
+    margin: 20px;
+}

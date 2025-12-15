@@ -1,0 +1,21 @@
+h1, p {
+    font-family: 'Paprika', cursive;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 10px 10px #558abb;
+    text-spacing-trim: space-all;
+}
+button {
+    font-family: 'Paprika', cursive;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: 5px 5px #558abb;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    transition: transform 0.2s;
+}
+.wrapper {
+    text-align: center;
+}
