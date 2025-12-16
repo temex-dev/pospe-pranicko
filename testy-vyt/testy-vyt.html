@@ -92,7 +92,7 @@ jak jste nas to ucil, uzivejte</h1>
                 <input type="radio" id="otazka7-d" name="otazka7" value="D">
                 <label for="otazka7-d">Pred Denisem</label><br><br>
 
-            <p>Kterou klavesovou zkratku pro prepnuti karty v prohlizeni Google autor "posila do etheru"?</p>
+            <p>Kterou klavesovou zkratku pro prepnuti karty v prohlizeni Google auto "posila do etheru"?</p>
                 <input type="radio" id="otazka8-a" name="otazka8" value="A">
                 <label for="otazka8-a">Ctrl + Tab</label><br>
                 <input type="radio" id="otazka8-b" name="otazka8" value="B">
@@ -140,8 +140,8 @@ jak jste nas to ucil, uzivejte</h1>
     </div>
 
     <div class="playlist">
-        <p style="text-align: center; background: rgba(255,255,255,0.2);margin-right:50px"><a href="https://soundcloud.com/temex-416249835/sets/ai-slop" target="_blank">!!!!PLAYLIST NA SOUNDCLOUD!!!!</a></p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2230168148&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/temex-416249835" title="Temex" target="_blank" style="color: #cccccc; text-decoration: none;">Temex</a> · <a href="https://soundcloud.com/temex-416249835/3c718fdb-d406-4706-a603-c2bb981d60d5" title="vojta stojka" target="_blank" style="color: #cccccc; text-decoration: none;">vojta stojka</a></div>
+        <p style="text-align: center; background: rgba(255,255,255,0.2);margin-right:50px"><a href="https://soundcloud.com/temex-416249835/sets/ai-slop-extended" target="_blank">!!!!PLAYLIST NA SOUNDCLOUD!!!!</a></p>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2230726685&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/temex-416249835" title="Temex" target="_blank" style="color: #cccccc; text-decoration: none;">Temex</a> · <a href="https://soundcloud.com/temex-416249835/vojta-stojka-18" title="vojta stojka" target="_blank" style="color: #cccccc; text-decoration: none;">vojta stojka</a></div>
     </div>
 
     <div class="pop-up" id="pop-up">
@@ -197,6 +197,20 @@ jak jste nas to ucil, uzivejte</h1>
         <button type="button" onclick="close_pop_up()">Zavrit</button>
     </div>
     <a href='#' class="stt" title="kod na toto jsem taky ukradl..."></a>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!hasAccess()) {
+                alert("Nemas pristup, asi vyprsela relace");
+                location.replace("./index.html");
+                return;
+            }
+            document.body.style.display = "block";
+            alert("Pristup povolen");
+        });
+        function hasAccess() {
+            return document.cookie.includes("pristup=povoleny");
+        }
+    </script>
     <script src="testy-vyt.js"></script>
 </body>
 </html>

@@ -14,10 +14,55 @@
         <p>Ostatni stranky maji na spodu hudbu do pozadi,<sub>jede to pres soundcloud, prosim pustte si</sub></p>
         <p>Na strankach jsou ukazky celkem 3 pisni, v playlistu je jich celkem 5<sub>jen tak pro info</sub></p>
         <p><sup>scroll dolu</sup></p>
+        <p>tato stranka pouziva cookies kvuli autentikaci :)</p>
         <br><br>
 
+        <div class="pswd_popup">
+            <form class="formular">
+                <label for="pswd_input">Zadej heslo</label>
+                <input type="password" id="pswd_input" name="pswd_input">
+                <button type="button" onclick="check_pswd()">Odeslat</button>
+            </form>
+            <button onclick="close_popup()">Zavrit</button>
+        </div>
+
         <div class="wrapper">
-            <button onclick="location.href='./uvitani.html'">Krasne narozeni</button>
+            <button onclick="show_popup()">Krasne narozeni</button>
         </div>
     </body>
+
+    <script>
+        const PASSWORD_HASH = "d48c95cd22c83d1c22ded518bfdf042a93e2216f2fed1e20acfa976a8e15ec14";
+       
+        async function sha256(text) {
+            const data = new TextEncoder().encode(text);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+        async function check_pswd() {
+            clearAccess();
+            const input = document.getElementById("pswd_input").value;
+            const inputHash = await sha256(input);
+
+            if (inputHash === PASSWORD_HASH) {
+                alert("presmerovavam na hlavni stranku");
+                document.cookie = "pristup=povoleny; path=/; max-age=3600";
+                alert(document.cookie);
+                location.href = "./uvitani.html";
+            } else {
+                alert("spatne heslo");
+            }
+        }
+        function show_popup() {
+            document.querySelector('.pswd_popup').style.display = 'block';
+        }
+        function close_popup() {
+            document.querySelector('.pswd_popup').style.display = 'none';
+        }
+        function clearAccess() {
+            document.cookie = "pristup=; path=/; max-age=0";
+        }
+    </script>
 </html>

@@ -2,6 +2,7 @@ body {
     background-image: url(../img/oko-background.gif);
     background-size: cover;
     background-repeat: repeat;
+    display: none;
 }
 .levacka, .pravacka {
     width: 45%;;

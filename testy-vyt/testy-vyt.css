@@ -2,6 +2,7 @@ body {
     background-image: url(../img/binbous_servr.png);
     background-size: contain;
     background-repeat: repeat-y;
+    display: none;
 }
 #text {
     font-family: 'Times New Roman', Times, serif;

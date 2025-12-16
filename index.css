@@ -5,7 +5,7 @@ h1, p {
     text-shadow: 10px 10px #558abb;
     text-spacing-trim: space-all;
 }
-button {
+.wrapper button {
     font-family: 'Paprika', cursive;
     font-size: 40px;
     cursor: pointer;
@@ -18,4 +18,28 @@ button {
 }
 .wrapper {
     text-align: center;
+}
+.pswd_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pswd_popup button {
+    background-color: red;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 5px 5px #558abb;
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.2s;
+    margin-top: 10px;
 }
