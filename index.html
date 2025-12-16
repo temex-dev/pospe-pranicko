@@ -18,7 +18,7 @@
         <br><br>
 
         <div class="pswd_popup">
-            <form class="formular">
+            <form class="formular" onsubmit="return validateForm(event)" name="formular" action="./index.html">
                 <label for="pswd_input">Zadej heslo</label>
                 <input type="password" id="pswd_input" name="pswd_input">
                 <button type="button" onclick="check_pswd()">Odeslat</button>
@@ -62,6 +62,20 @@
         }
         function clearAccess() {
             document.cookie = "pristup=; path=/; max-age=0";
+        }
+        async function validateForm(event) {
+            event.preventDefault();
+
+            const input = document.forms["formular"]["pswd_input"].value;
+            const inputHash = await sha256(input);
+
+            if (inputHash === PASSWORD_HASH) {
+                alert("presmerovavam na hlavni stranku");
+                document.cookie = "pristup=povoleny; path=/; max-age=3600";
+                location.replace("./uvitani.html");
+            } else {
+                alert("spatne heslo");
+            }
         }
     </script>
 </html>
